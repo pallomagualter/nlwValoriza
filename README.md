@@ -18,7 +18,7 @@
 </div>
 
 
-## Regras
+# ☑️ Regras
     
 - Cadastro de usuário
 
@@ -48,7 +48,6 @@
 * [Technologies](#computer-technologies)
 * [Features](#rocket-features)
 * [How to Run](#construction_worker-how-to-run)
-* [Found a bug? Missing a specific feature?](#bug-issues)
 * [Contributing](#tada-contributing)
 * [License](#closed_book-license)
 
