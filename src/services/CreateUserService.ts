@@ -4,7 +4,7 @@ import { UsersRepositories } from "../repositories/UsersRepositories";
 interface IUserRequest {
   name: string;
   email: string;
-  admin?: boolean;
+  admin?: boolean; //opcional
 }
 
 class CreateUserService {
@@ -13,19 +13,19 @@ class CreateUserService {
 
     console.log("Email", email);
 
-    if (!email) {
+    if (!email) { //verificação se e-mail foi preenchido
       throw new Error("Email incorrect");
     }
 
-    const userAlreadyExists = await usersRepository.findOne({
+    const userAlreadyExists = await usersRepository.findOne({ //procurar se existe algum usuário cadastrado com o e-mail em questão
       email,
     });
 
-    if (userAlreadyExists) {
+    if (userAlreadyExists) { //se o usuário já existe monstrar mensagem de erro
       throw new Error("User already exists");
     }
 
-    const user = usersRepository.create({
+    const user = usersRepository.create({ //tudo certo criar o usuário
       name,
       email,
       admin,
