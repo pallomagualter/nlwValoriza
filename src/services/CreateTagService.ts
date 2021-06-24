@@ -12,22 +12,22 @@ class CreateTagService {
 
         // verifica se já existe este nome cadastrado
         // SELECT * FROM TAGS WHERE NAME = 'name'
-        const tagAlreadyExists = await tagsRepositories.findOne({ 
-            name
-        });
-
-        if (tagsRepositories) {
+        const tagAlreadyExists = await tagsRepositories.findOne({
+            name,
+            });
+        
+            if (tagAlreadyExists) {
             throw new Error("Tag already exists!");
+            }
+        
+            const tag = tagsRepositories.create({
+            name,
+            });
+        
+            await tagsRepositories.save(tag);
+        
+            return tag;
         }
-
-        const tag = tagsRepositories.create({
-            name
-        });
-
-        await tagsRepositories.save(tag);
-
-        return tag;
     }
-}
-
-export { CreateTagService }
+        
+export { CreateTagService };
