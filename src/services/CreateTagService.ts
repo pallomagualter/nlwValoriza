@@ -2,7 +2,7 @@ import { getCustomRepository } from "typeorm";
 import { TagsRepositories } from "../repositories/TagsRepositories";
 
 
-class CreateTagsService {
+class CreateTagService {
     async execute(name: string) {
         const tagsRepositories = getCustomRepository(TagsRepositories);
 
@@ -30,4 +30,4 @@ class CreateTagsService {
     }
 }
 
-export { CreateTagsService }
+export { CreateTagService }
