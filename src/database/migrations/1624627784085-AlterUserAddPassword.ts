@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, TableColumn} from "typeorm";
+import {IsNull, MigrationInterface, QueryRunner, TableColumn} from "typeorm";
 
 export class AlterUserAddPassword1624627784085 implements MigrationInterface {
 
@@ -7,7 +7,8 @@ export class AlterUserAddPassword1624627784085 implements MigrationInterface {
             "users",
             new TableColumn({
                 name: "password",
-                type: "varchar"
+                type: "varchar",
+                isNullable: true //para permitir a criação da tabela, já que havia dados
             })
         )
     }
