@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { verify } from "jsonwebtoken";
 
-interface IPayLoad {
+interface IPayload {
     sub: string;
 }
 
@@ -27,7 +27,7 @@ export function ensureAuthenticated(
         const { sub }= verify( 
             token, 
             "a0a68817a5ac9b36bddada1fd86be7d6"
-        ) as IPayLoad;
+        ) as IPayload;
 
         // Recuperar informações do usuário
         request.user_id = sub;
