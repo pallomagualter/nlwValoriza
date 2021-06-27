@@ -48,7 +48,6 @@
 * [Technologies](#computer-technologies)
 * [Features](#rocket-features)
 * [How to Run](#construction_worker-how-to-run)
-* [Contributing](#tada-contributing)
 * [License](#closed_book-license)
 
 
@@ -84,9 +83,6 @@ $ yarn start
 ```
 Access API at http://localhost:3333/
 
-
-# :tada: Contributing
-First of all, thank you for being interested in helping out, your time is always appreciated in every way. :100:
 
 # :closed_book: License
 
